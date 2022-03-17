@@ -1,0 +1,152 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.top-info-row{
+    width: 100%;
+    height: 10vh;
+    background-color: rgb(153, 153, 153);
+}
+.yathzeeTafel{
+    position: absolute;
+    left: 22.5vw;
+    top: 28vh;
+    width: 55%;
+    height: 70%;
+    border-radius: 20%;
+    background-color: rgb(97, 58, 0);
+}
+.scorebox1, .scorebox2{
+    background-color: rgb(153, 153, 153);
+    width: 20%;
+    height: 100%;
+}
+
+.scorebox1{
+    position: absolute;
+    left: 0;
+    top: 10vh;    
+}
+.scorebox2{
+    position: absolute;
+    right: 0;
+    top: 10vh;    
+}
+#turn{
+    position: absolute;
+    top: 3vh;
+    left: 22vw;
+    font-size: xx-large;
+}
+#rollAgain{
+    position: absolute;
+    right:36vw;
+    top: 3vh;
+    border-radius: 50px;
+    border: solid black 2px;
+    background-color: white;
+    width: 200px;
+    height: 30px;
+    font-size: large;
+    line-height: 25px;
+}
+#rollAgain:hover{
+    background-color: rgb(192, 192, 192);
+}
+#rollAgain:active{
+    background-color: rgb(133, 133, 133);
+}
+.p1, .p2{
+    position: absolute;
+    font-size: x-large;
+}
+.p1{
+    left: 6vw;
+    top: 6vh;
+}
+.p2{
+    right: 6vw;
+    top: 6vh;
+}
+.score{
+    height: 45px;
+    border: black solid 2px;
+    background-color: #FFFFFF;
+    width: 6.6vw;
+}
+.info{
+    width: 19.8vw;
+}
+.scores{
+    display: flex;
+}
+.dice{
+    width: 35px;
+    height: 35px;
+    float: right;
+    margin-right: 5px;
+    transform: translateY(-15px)
+}
+.additional-info{
+    display: flex;
+}
+.tot-scores{
+    width: 13.2vw;
+}
+.dice1{
+    position: absolute;
+    top: 13vh;
+    left: 16vw;
+}
+.dice2{
+    position: absolute;
+    top: 4vh;
+    left: 39vw;
+}
+.dice3{
+    position: absolute;
+    top: 43vh;
+    left: 23vw;
+}
+.dice4{
+    position: absolute;
+    top: 43vh;
+    left: 43vw;
+}
+.dice5{
+    position: absolute;
+    top: 28vh;
+    left: 3vw;
+}
+.dice1, .dice2, .dice3, .dice4, .dice5{
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    border: solid rgb(0, 170, 0) 4px;
+}
+
+.dice1:hover, .dice2:hover, .dice3:hover, .dice4:hover, .dice5:hover{
+    width: 120px;
+    height: 120px;
+    border: solid rgb(0, 195, 255) 3px;
+    transition: border 80ms;
+}
+.notSelected{
+    border: none;
+    border-radius: 10px;
+}
+.hidden{
+    visibility: hidden;
+}
+
+.p1Possible, .p2Possible{
+    color: red;
+    text-align: center;
+}
+.definitive{
+    color:black;
+    text-decoration: bolder;
+    text-align: center;
+}

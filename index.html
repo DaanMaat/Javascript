@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="srylesheet" type="text/css" href="responsive.css">
+    <title>Yahtzee</title>
+</head>
+<body></body>
+    <div class="top-info-row">
+        <h2 id="turn">turn</h2>
+        <button id="rollAgain" class=""></button>
+        <p class="p1">Player 1</p>
+        <p class="p2">Player 2</p>
+    </div>
+    <div class="yathzeeTafel">
+        <div class="dices1">
+            <img class="dice1 notSelected">
+        </div>
+        <div class="dices2">
+            <img class="dice2 notSelected">
+        </div>
+        <div class="dices3">
+            <img class="dice3 notSelected">
+        </div>
+        <div class="dices4">
+            <img class="dice4 notSelected">
+        </div>
+        <div class="dices5">
+            <img class="dice5 notSelected">
+        </div>
+    </div>
+    <div class="scorebox1">
+        <div class="scorekaart-1">
+            <div class="additional-info">
+                <div class="score info">
+                    <p><strong>DEEL 1</strong></p>
+                </div>
+                <div class="score info">
+                    <p>punten telling</p>
+                </div>
+                <div class="score info">
+                    <p>score</p>
+                </div>
+            </div>
+        <div class="p1scores1 scores">
+                <div class="score dicebox">
+                    <p>enen</p>
+                    <img class="dice dice-p1" src="Dice1.png">
+                </div>
+                <div class="score">
+                    <p>tel alle enen</p>
+                </div>
+                <div class="p1score1D score">
+                    <p class="p1score-enen p1Possible">0</p>
+                </div>
+        </div>
+        <div class="p1scores2 scores">
+                <div class="score dicebox">
+                    <p>tweeën</p>
+                    <img class="dice dice-p1" src="Dice2.png">
+                </div>
+                <div class="score">
+                    <p>tel alle tweeën</p>
+                </div>
+                <div class="p1score2D score">
+                    <p class="p1score-tweeën p1Possible">0</p>
+                </div>
+        </div>
+        <div class="p1scores3 scores">
+                <div class="score dicebox" >
+                    <p>drieën</p>
+                    <img class="dice dice-p1" src="Dice3.png">
+                </div>
+                <div class="score">
+                    <p>tel alle drieën</p>
+                </div>
+                <div class="p1score3D score">
+                    <p class="p1score-drieën p1Possible">0</p>
+                </div>
+        </div>
+        <div class="p1scores4 scores">
+            <div class="score dicebox">
+                <p>vieren</p>
+                <img class="dice dice-p1" src="Dice4.png">
+            </div>
+            <div class="score">
+                <p>tel alle vieren</p>
+            </div>
+            <div class="p1score4D score">
+                <p class="p1score-vieren p1Possible">0</p>
+            </div>
+        </div>
+        <div class="p1scores5 scores">
+            <div class="score dicebox">
+                <p>vijfen</p>
+                <img class="dice dice-p1" src="Dice5.png">
+            </div>
+            <div class="score">
+                <p>tel alle vijfen</p>
+            </div>
+            <div class="p1score5D score">
+                <p class="p1score-vijfen p1Possible">0</p>
+            </div>
+        </div>
+        <div class="p1scores6 scores">
+            <div class="score dicebox">
+                <p>zessen</p>
+                <img class="dice dice-p1" src="Dice6.png">
+            </div>
+            <div class="score">
+                <p>tel alle zessen</p>
+            </div>
+            <div class="p1score6D score">
+                <p class="p1score-zessen p1Possible">0</p>
+            </div>
+        </div>
+        <div class="p1TBoven scores">
+            <div class="score tot-scores">
+                <p>Totaal aantal punten</p>
+            </div>
+            <div class="score p1TopScoredD">
+                <p class="p1TopScoredP definitive">0</p>
+            </div>
+        </div>
+        <div class="p1bonus scores">
+            <div class="score">
+                <p>extra bonus</p>
+                <p>totaal ≥ 63</p>
+            </div>
+            <div class="score">
+                <p>35 punten</p>
+            </div>
+            <div class="score p1BonusD">
+                <p class="p1bonusP definitive">0</p>
+            </div>
+        </div>
+        <div class="p1TotScoreBoven scores">
+            <div class="score tot-scores">
+                <p>Totaal aantal punten</p>
+                <p>Bovenste helft</p>
+            </div>
+            <div class="score p1TopScoredWBD">
+                <p class="p1TopScoredWBP definitive">0</p>
+            </div>
+        </div>
+        <div class="info score">
+            <p><strong>DEEL 2</strong></p>
+        </div>
+        <div class="p1TOK scores">
+            <div class="score">
+                <p>Three of a kind</p>
+                <p>3 dezelfde</p>
+            </div>
+            <div class="score">
+                <p>Totaal v.d stenen</p>
+            </div>
+            <div class="p1ToKD score">
+                <p class="p1ToKP p1Possible">0</p>
+            </div>
+        </div>
+        <div class="p1Caree scores">
+            <div class="score">
+                <p>Caree</p>
+                <p>4 dezelfde</p>
+            </div>
+            <div class="score">
+                <p>Totaal v.d stenen</p>
+            </div>
+            <div class="p1CareeD score">
+                <p class="p1CareeP p1Possible">0</p>
+            </div>
+        </div>
+        <div class="p1FullHouse scores">
+            <div class="score">
+                <p>Full House</p>
+                <p>3 + 2 dezelfde</p>
+            </div>
+            <div class="score">
+                <p>25 punten</p>
+            </div>
+            <div class="p1FullHouseD score">
+                <p class="p1FullHouseP p1Possible">0</p>
+            </div>
+        </div>
+        <div class="p1KStraat scores">
+            <div class="score">
+                <p>Kleine straat</p>
+                <p>4 achter elkaar</p>
+            </div>
+            <div class="score">
+                <p>30 punten</p>
+            </div>
+            <div class="p1KStraatD score">
+                <P class="p1KStraatP p1Possible">0</P>
+            </div>
+        </div>
+        <div class="p1GStraat scores">
+            <div class="score">
+                <p>Grote straat</p>
+                <p>5 achter elkaar</p>
+            </div>
+            <div class="score">
+                <p>40 punten</p>
+            </div>
+            <div class="p1GStraatD score">
+                <P class="p1GStraatP p1Possible">0</P>
+            </div>
+        </div>
+        <div class="p1Yahtzee scores">
+            <div class="score">
+                <p>Yahtzee</p>
+                <p>5 dezelfde</p>
+            </div>
+            <div class="score">
+                <p>50 punten</p>
+            </div>
+            <div class="p1YahtzeeD score">
+                <p class="p1Possible p1YahtzeeP">0</p>
+            </div>
+        </div>
+        <div class="p1Chance scores">
+            <div class="score">
+                <p>Chance</p>
+                
+            </div>
+            <div class="score">
+                <p>Totaal v.d stenen</p>
+            </div>
+            <div class="score p1ChanceD">
+                <p class="p1Possible p1ChanceP">0</p>
+            </div>
+        </div>
+        <div class="p1TotScoreOnder scores">
+            <div class="score tot-scores">
+                <p>Totaal aantal punten</p>
+                <p>Onderste helft</p>
+            </div>
+            <div class="score p1BottomScoredD">
+                <p class="p1BottomScoredP definitive">0</p>
+            </div>
+        </div>
+        <div class="p1TotaleScore scores">
+            <div class="score tot-scores">
+                <p>Totaal aantal punten</p>
+                <p>Totaal boven + onder</p>
+            </div>
+            <div class="score p1TotaalD">
+                <p class="p1TotaalP definitive">0</p>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="scorebox2">
+        <div class="scorekaart-2">
+            <div class="additional-info">
+                <div class="score info">
+                    <p><strong>DEEL 1</strong></p>
+                </div>
+                <div class="score info">
+                    <p>punten telling</p>
+                </div>
+                <div class="score info">
+                    <p>score</p>
+                </div>
+            </div>
+        <div class="p2scores1 scores">
+                <div class="score dicebox">
+                    <p>enen</p>
+                    <img class="dice dice-p1" src="Dice1.png">
+                </div>
+                <div class="score">
+                    <p>tel alle enen</p>
+                </div>
+                <div class="p2score1D score">
+                    <p class="p2score-enen p2Possible">0</p>
+                </div>
+        </div>
+        <div class="p2scores2 scores">
+                <div class="score dicebox">
+                    <p>tweeën</p>
+                    <img class="dice dice-p1" src="Dice2.png">
+                </div>
+                <div class="score">
+                    <p>tel alle tweeën</p>
+                </div>
+                <div class="p2score2D score">
+                    <p class="p2score-tweeën p2Possible">0</p>
+                </div>
+        </div>
+        <div class="p2scores3 scores">
+                <div class="score dicebox" >
+                    <p>drieën</p>
+                    <img class="dice dice-p1" src="Dice3.png">
+                </div>
+                <div class="score">
+                    <p>tel alle drieën</p>
+                </div>
+                <div class="p2score3D score">
+                    <p class="p2score-drieën p2Possible">0</p>
+                </div>
+        </div>
+        <div class="p2scores4 scores">
+            <div class="score dicebox">
+                <p>vieren</p>
+                <img class="dice dice-p1" src="Dice4.png">
+            </div>
+            <div class="score">
+                <p>tel alle vieren</p>
+            </div>
+            <div class="p2score4D score">
+                <p class="p2score-vieren p2Possible">0</p>
+            </div>
+        </div>
+        <div class="p2scores5 scores">
+            <div class="score dicebox">
+                <p>vijfen</p>
+                <img class="dice dice-p1" src="Dice5.png">
+            </div>
+            <div class="score">
+                <p>tel alle vijfen</p>
+            </div>
+            <div class="p2score5D score">
+                <p class="p2score-vijfen p2Possible">0</p>
+            </div>
+        </div>
+        <div class="p2scores6 scores">
+            <div class="score dicebox">
+                <p>zessen</p>
+                <img class="dice dice-p1" src="Dice6.png">
+            </div>
+            <div class="score">
+                <p>tel alle zessen</p>
+            </div>
+            <div class="p2score6D score">
+                <p class="p2score-zessen p2Possible">0</p>
+            </div>
+        </div>
+        <div class="p2TBoven scores">
+            <div class="score tot-scores">
+                <p>Totaal aantal punten</p>
+            </div>
+            <div class="score p2TopScoredD">
+                <p class="p2TopScoredP definitive">0</p>
+            </div>
+        </div>
+        <div class="p2bonus scores">
+            <div class="score">
+                <p>extra bonus</p>
+                <p>totaal ≥ 63</p>
+            </div>
+            <div class="score">
+                <p>35 punten</p>
+            </div>
+            <div class="score p2BonusD">
+                <p class="p2BonusP definitive">0</p>
+            </div>
+        </div>
+        <div class="p2TotScoreBoven scores">
+            <div class="score tot-scores">
+                <p>Totaal aantal punten</p>
+                <p>Bovenste helft</p>
+            </div>
+            <div class="score p2TopScoredWBD">
+                <p class="p2TopScoredWBP definitive">0</p>
+            </div>
+        </div>
+        <div class="info score">
+            <p><strong>DEEL 2</strong></p>
+        </div>
+        <div class="p2TOK scores">
+            <div class="score">
+                <p>Three of a kind</p>
+                <p>3 dezelfde</p>
+            </div>
+            <div class="score">
+                <p>Totaal van de stenen</p>
+            </div>
+            <div class="p2ToKD score">
+                <p class="p2ToKP p2Possible">0</p>
+            </div>
+        </div>
+        <div class="p2Caree scores">
+            <div class="score">
+                <p>Caree</p>
+                <p>4 dezelfde</p>
+            </div>
+            <div class="score">
+                <p>Totaal van de stenen</p>
+            </div>
+            <div class="p2CareeD score">
+                <p class="p2CareeP p2Possible">0</p>
+            </div>
+        </div>
+        <div class="p2FullHouse scores">
+            <div class="score">
+                <p>Full House</p>
+                <p>3 + 2 dezelfde</p>
+            </div>
+            <div class="score">
+                <p>25 punten</p>
+            </div>
+            <div class="p2FullHouseD score">
+                <p class="p2FullHouseP p2Possible">0</p>
+            </div>
+        </div>
+        <div class="p2KStraat scores">
+            <div class="score">
+                <p>Kleine straat</p>
+                <p>4 achter elkaar</p>
+            </div>
+            <div class="score">
+                <p>30 punten</p>
+            </div>
+            <div class="p2KStraatD score">
+                <p class="p2KStraatP p2Possible">0</p>
+            </div>
+        </div>
+        <div class="p2GStraat scores">
+            <div class="score">
+                <p>Grote straat</p>
+                <p>5 achter elkaar</p>
+            </div>
+            <div class="score">
+                <p>40 punten</p>
+            </div>
+            <div class="p2GStraatD score">
+                <p class="p2GStraatP p2Possible">0</p>
+            </div>
+        </div>
+        <div class="p2Yahtzee scores">
+            <div class="score">
+                <p>Yahtzee</p>
+                <p>5 dezelfde</p>
+            </div>
+            <div class="score">
+                <p>50 punten</p>
+            </div>
+            <div class="p2YahtzeeD score">
+                <p class="p2Possible p2YahtzeeP">0</p>
+            </div>
+        </div>
+        <div class="p2Chance scores">
+            <div class="score">
+                <p>Chance</p>
+            </div>
+            <div class="score">
+                <p>Totaal v.d stenen</p>
+            </div>
+            <div class="score p2ChanceD">
+                <p class="p2Possible p2ChanceP">0</p>
+            </div>
+        </div>
+        <div class="p2TotScoreOnder scores">
+            <div class="score tot-scores">
+                <p>Totaal aantal punten</p>
+                <p>Onderste helft</p>
+            </div>
+            <div class="score p2BottomScoredD">
+                <p class="p2BottomScoredP definitive">0</p>
+            </div>
+        </div>
+        <div class="p2TotaleScore scores">
+            <div class="score tot-scores">
+                <p>Totaal aantal punten</p>
+                <p>Totaal boven + onder</p>
+            </div>
+            <div class="score p2TotaalD">
+                <p class="p2TotaalP definitive">0</p>
+            </div>
+        </div>
+        </div>    
+    </div>
+    <script	src="script.js"></script>
+</body>
+</html>
